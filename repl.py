@@ -121,7 +121,7 @@ def run_command(words, trace, infile=None, outfile=None, append=False):
         elapsed = time.monotonic() - start #stopwatch stopped
         outcome = decode_status(status)
         if trace:
-            print_trace(words, pid, outcpme, elapsed, usage, redir_text(infile, outfile, append))
+            print_trace(words, pid, outcome, elapsed, usage, redir_text(infile, outfile, append))
 
 def run_pipeline(lwords, linfile, rwords, routfile, rappend, trace):
     sys.stdout.flush()
